@@ -2,19 +2,19 @@
 //  BusinessCell.swift
 //  Yelp
 //
-//  Created by Kerry LEVEILLE on 10/11/18.
+//  Created by Anne Kerrie Leveille on 10/3/18.
 //  Copyright © 2018 Timothy Lee. All rights reserved.
 //
 
 import UIKit
 
 class BusinessCell: UITableViewCell {
-    
+
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var ratingImageView: UIImageView!
-    @IBOutlet weak var reviewsCountLabel: UILabel!
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var categoriesLabel: UILabel!
     
@@ -24,7 +24,7 @@ class BusinessCell: UITableViewCell {
             thumbImageView.setImageWith(business.imageURL!)
             categoriesLabel.text = business.categories
             adressLabel.text = business.address
-            reviewsCountLabel.text = "\(business.reviewCount!) Reviews"
+            reviewsLabel.text = "\(business.reviewCount!) Reviews"
             ratingImageView.image = business.ratingImage
             distanceLabel.text = business.distance
         }
@@ -41,11 +41,11 @@ class BusinessCell: UITableViewCell {
         super.layoutSubviews()
         nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
+
 }

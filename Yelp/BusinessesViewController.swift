@@ -4,62 +4,60 @@
 //
 //  Created by Timothy Lee on 4/23/15.
 //  Copyright (c) 2015 Timothy Lee. All rights reserved.
-//
+//  Copyright (c) 2018 Anne Kerrie Leveille. All rights reserved.
 
 import UIKit
 
 class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-
-    
-    var businesses: [Business]!
-    
     @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     var update: [NSDictionary] = []
-    var business: [Business]!
+    var businesses: [Business]!
     var filteredResto: [Business]!
     var seachBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        tableView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
         
         //tableView.rowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
         
         MySearchBar()
-        
+      
         Business.searchWithTerm(term: "Burger", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
-            self.businesses = businesses
-            self.filteredResto = businesses
-            self.tableView.reloadData()
+                self.businesses = businesses
+                self.filteredResto = businesses
+                self.tableView.reloadData()
             
-            if let businesses = businesses {
-                for business in businesses {
-                    print(business.name!)
-                    print(business.address!)}
-            }
+                if let businesses = businesses {
+                    for business in businesses {
+                        print(business.name!)
+                        print(business.address!)}
+                }
             
-        })
+            })
         
         // Example of Yelp search with more search options specified
         /* Business.searchWithTerm(term: "Restaurants", sort: .distance, categories: ["asianfusion", "bugers"]) { (businesses, error) in
-         self.businesses = businesses
-         self.filteredResto = businesses
-         self.tableView.reloadData()
-         for business in self.businesses {
-         print(business.name!)
-         print(business.address!)
+                self.businesses = businesses
+                self.filteredResto = businesses
+                self.tableView.reloadData()
+                 for business in self.businesses {
+                     print(business.name!)
+                     print(business.address!)
+                 }
+           // self.tableView.reloadData()
          }
-         // self.tableView.reloadData()
-         }
-         */
+        */
     }
     
     
@@ -101,7 +99,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessCell
         //cell.business = businesses[indexPath.row]
