@@ -1,8 +1,8 @@
 # Project 3 -*Basic Yelp Client*
 
-**YelpApp** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
+**Yelp** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: **3** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -24,14 +24,12 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='yelpVideoWalkthrough.gif' title='Video Walkthrough Project 3' width='' alt='Video Walkthrough Project 3' />
+<img src='Yelp.gif' title='Video Walkthrough Project 3' width='' alt='Video Walkthrough Project 3' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -41,7 +39,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [2018] [ISAAC]
+Copyright [2018] [Anne Kerrie Leveille]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
